@@ -3,24 +3,24 @@
 
 Стек:
 
-ML: catboost, pandas, numpy
-API: flask
+ML: catboost, pandas, numpy<br>
+API: flask<br>
 Данные: с kaggle - https://www.kaggle.com/i1dlmd/real-estate-price-prediction-gu-final/data
 
 Задача: предсказать значение цены на недвижимость. 
 
 Используемые признаки:
 
-DistrictId - идентификационный номер района
-Square - площадь
-LifeSquare - жилая площадь
-KitchenSquare - площадь кухни
-Floor - этаж
-HouseFloor - количество этажей в доме
-HouseYear - год постройки дома
-Ecology_1 - экологический показатель местности
-Social_1 - социальный показатель местности
-Shops_1 - показатель, связанный с наличием магазинов, торговых центров
+DistrictId - идентификационный номер района<br>
+Square - площадь<br>
+LifeSquare - жилая площадь<br>
+KitchenSquare - площадь кухни<br>
+Floor - этаж<br>
+HouseFloor - количество этажей в доме<br>
+HouseYear - год постройки дома<br>
+Ecology_1 - экологический показатель местности<br>
+Social_1 - социальный показатель местности<br>
+Shops_1 - показатель, связанный с наличием магазинов, торговых центров<br>
 Price - цена квартиры
 
 
