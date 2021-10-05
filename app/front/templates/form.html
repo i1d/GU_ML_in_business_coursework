@@ -1,0 +1,97 @@
+{% extends "index.html" %}
+{% block title %}Enter the real estate data{% endblock %}
+{% block content %}
+<script>
+      function outputUpdateSquare(Square) {document.getElementById("output-Square").innerHTML = Square;}
+      function outputUpdateLifeSquare(LifeSquare) {document.getElementById('output-LifeSquare').innerHTML = LifeSquare;}
+      function outputUpdateKitchenSquare(KitchenSquare) {document.getElementById('output-KitchenSquare').innerHTML = KitchenSquare;}
+      function outputUpdateFloor(Floor) {document.getElementById('output-Floor').innerHTML = Floor;}
+      function outputUpdateEcology_1(Ecology_1) {document.getElementById('output-Ecology_1').innerHTML = Ecology_1;}
+      function outputUpdateSocial_1(Social_1) {document.getElementById('output-Social_1').innerHTML = Social_1;}
+      function outputUpdateShops_1(Shops_1) {document.getElementById('output-Shops_1').innerHTML = Shops_1;}
+      function outputUpdateHouseFloor(HouseFloor) {document.getElementById('output-HouseFloor').innerHTML = HouseFloor;}
+      function outputUpdateHouseYear(HouseYear) {document.getElementById('output-HouseYear').innerHTML = HouseYear;}
+      function outputUpdateBldId(BldId) {document.getElementById('output-BldId').innerHTML = BldId;}
+      function outputUpdateDistrictId_count(DistrictId_count) {document.getElementById('output-DistrictId_count').innerHTML = DistrictId_count;}
+      function outputUpdateMedPriceByDistrict(MedPriceByDistrict) {document.getElementById('output-MedPriceByDistrict').innerHTML = MedPriceByDistrict;}
+      function outputUpdateMedPriceBySquare(MedPriceBySquare) {document.getElementById('output-MedPriceBySquare').innerHTML = MedPriceBySquare;}
+</script>
+<h1 class="text-center">Real estate data</h1>
+<br>
+<div class="row d-flex justify-content-center">
+    <div class="col-md-6">
+        <form method="POST" action="{{ url_for('predict_form') }}">
+            <div class="form-group row">
+                {{ form.Square.label }}: {{ form.Square(min=2, max=1000, oninput="outputUpdateSquare(this.value)") }}
+                <output for="Square" id="output-Square"></output>
+            </div>
+
+            <div class="form-group row">
+                {{ form.LifeSquare.label }}: {{ form.LifeSquare(min=1, max=999, oninput="outputUpdateLifeSquare(this.value)") }}
+                <output for="LifeSquare" id="output-LifeSquare"></output>
+            </div>
+
+            <div class="form-group row">
+                {{ form.KitchenSquare.label }}: {{ form.KitchenSquare(min=1, max=100, oninput="outputUpdateKitchenSquare(this.value)") }}
+                <output for="KitchenSquare" id="output-KitchenSquare"></output>
+            </div>
+
+            <div class="form-group row">
+                {{ form.Floor.label }}: {{ form.Floor(min=1, max=100, oninput="outputUpdateFloor(this.value)") }}
+                <output for="Floor" id="output-Floor"></output>
+            </div>
+
+            <div class="form-group row">
+                {{ form.Ecology_1.label }}: {{ form.Ecology_1(min=0, max=100, oninput="outputUpdateEcology_1(this.value)") }}
+                <output for="Ecology_1" id="output-Ecology_1"></output>
+            </div>
+
+            <div class="form-group row">
+                {{ form.Social_1.label }}: {{ form.Social_1(min=0, max=100, oninput="outputUpdateSocial_1(this.value)") }}
+                <output for="Social_1" id="output-Social_1"></output>
+            </div>
+
+            <div class="form-group row">
+                {{ form.Shops_1.label }}: {{ form.Shops_1(min=0, max=100, oninput="outputUpdateShops_1(this.value)") }}
+                <output for="Shops_1" id="output-Shops_1"></output>
+            </div>
+
+            <div class="form-group row">
+                {{ form.HouseFloor.label }}: {{ form.KitchenSquare(min=1, max=90, oninput="outputUpdateHouseFloor(this.value)") }}
+                <output for="HouseFloor" id="output-HouseFloor"></output>
+            </div>
+
+            <div class="form-group row">
+                {{ form.HouseYear.label }}: {{ form.HouseYear(min=1500, max=2021, oninput="outputUpdateHouseYear(this.value)") }}
+                <output for="HouseYear" id="output-HouseYear"></output>
+            </div>
+
+            <div class="form-group row">
+                {{ form.BldId.label }}: {{ form.BldId(min=0, max=300, oninput="outputUpdateBldId(this.value)") }}
+                <output for="BldId" id="output-BldId"></output>
+            </div>
+
+            <div class="form-group row">
+                {{ form.DistrictId_count.label }}: {{ form.DistrictId_count(min=0, max=300, oninput="outputUpdateDistrictId_count(this.value)") }}
+                <output for="DistrictId_count" id="output-DistrictId_count"></output>
+            </div>
+
+            <div class="form-group row">
+                {{ form.MedPriceByDistrict.label }}: {{ form.MedPriceByDistrict(min=1, max=500000, oninput="outputUpdateMedPriceByDistrict(this.value)") }}
+                <output for="MedPriceByDistrict" id="output-MedPriceByDistrict"></output>
+            </div>
+
+            <div class="form-group row">
+                {{ form.MedPriceBySquare.label }}: {{ form.MedPriceBySquare(min=1, max=10000, oninput="outputUpdateMedPriceBySquare(this.value)") }}
+                <output for="MedPriceBySquare" id="output-MedPriceBySquare"></output>
+            </div>
+
+
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-info">Predict</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
