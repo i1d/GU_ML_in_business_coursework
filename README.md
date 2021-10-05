@@ -29,8 +29,8 @@ Price - цена квартиры
 
 ### Клонируем репозиторий и создаем образ
 ```
-$ git clone https://github.com/ilmdn/GB_docker_flask_example.git
-$ cd ml_in_business_coursework
+$ git clone https://github.com/i1s/GU_ML_in_business_coursework.git
+$ cd GU_ML_in_business_coursework
 $ docker build -t gu/ml_in_business_coursework .
 ```
 
